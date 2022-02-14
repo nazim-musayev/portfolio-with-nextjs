@@ -22,7 +22,7 @@ const SkillCard = ({skill, selected }: Props) => {
           {name}
         </p>
       </div>
-      <p className="text-gray-400">
+      <p className="text-gray-400 text-justify">
         {isSelected ? description : `${description.slice(0,70)}...`}
       </p>
     </div>

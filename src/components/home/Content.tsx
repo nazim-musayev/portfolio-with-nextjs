@@ -3,7 +3,7 @@ import ResumeButton from 'components/shared/ResumeButton';
 const Content = () => {
   return (
     <article>
-      <p className="mb-5">
+      <p className="mb-5 text-justify">
         This is my portfolio website, where you can find my projects, contact information
         and also a little bit personal information about me. <br /> 
         <br />

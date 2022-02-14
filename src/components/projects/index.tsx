@@ -14,7 +14,7 @@ const Projects = ({projects}: Props) => {
 
   return (
     <>
-      <p className="px-5 pb-10 text-red-500">
+      <p className="px-5 pb-10 text-red-500 text-justify">
         * The last 3 projects from above are not responsive for mobile devices.
       </p>
       <div className="grid lg:grid-cols-2 gap-6">

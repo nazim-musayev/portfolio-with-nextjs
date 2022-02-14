@@ -35,14 +35,14 @@ const ProjectCard = ({project, selected }: Props) => {
           {name}
         </h2>
         <div className={`flex ${!isSelected && 'md:col-span-5 md:justify-end'} lg:justify-start text-primary space-x-4`}>
-          <CardButton url={url} text="visit website">
+          <CardButton url={url} text="website">
             <BiLinkExternal />
           </CardButton>
-          <CardButton url={repo} text="git repo">
+          <CardButton url={repo} text="repo">
             <FaGithub />
           </CardButton>
           {(demoVideoUrl) && (
-            <CardButton url={demoVideoUrl} text="demo video">
+            <CardButton url={demoVideoUrl} text="video">
               <BsCollectionPlay />
             </CardButton>
           )} 
@@ -55,7 +55,7 @@ const ProjectCard = ({project, selected }: Props) => {
       ) }
       {!isSelected && (
         <>
-          <div className="h-12 overflow-hidden">
+          <div className="h-12 overflow-hidden text-justify">
             <RichTextrenderer richText={content.json} />
           </div>
           <div className="text-xl font-bold text-center">. . .</div>

@@ -38,7 +38,7 @@ const ContactForm = () => {
           <input 
            placeholder="Name"
            {...register("name", { required: true })}
-           className={`contactFormInput placeholder:italic w-full ${errors.name && "placeholder:text-red-600"}`}
+           className={`contactFormInput placeholder:italic w-[95%] sm:w-full ${errors.name && "placeholder:text-red-600"}`}
           />
           {errors.name?.message && <ErrorMessage message={errors.name.message} />}
         </div>
@@ -46,7 +46,7 @@ const ContactForm = () => {
           <input
            placeholder="Email"
            {...register("email", { required: true })}
-           className={`contactFormInput placeholder:italic w-full ${errors.email && "placeholder:text-red-600"}`}
+           className={`contactFormInput placeholder:italic w-[95%] sm:w-full ${errors.email && "placeholder:text-red-600"}`}
           />
           {errors.email?.message && <ErrorMessage message={errors.email.message} />}
         </div>
@@ -54,13 +54,13 @@ const ContactForm = () => {
       <input
        placeholder="Subject"
        {...register("subject", { required: true })}
-       className={`contactFormInput placeholder:italic ${errors.subject && "placeholder:text-red-600"}`} 
+       className={`contactFormInput placeholder:italic w-[95%] sm:w-full ${errors.subject && "placeholder:text-red-600"}`} 
       />
       {errors.subject?.message && <ErrorMessage message={errors.subject.message} />}
       <textarea 
        placeholder="Message"
        {...register("message", { required: true })}
-       className={`contactFormInput placeholder:italic ${errors.message && "placeholder:text-red-600"}`} 
+       className={`contactFormInput placeholder:italic w-[95%] sm:w-full ${errors.message && "placeholder:text-red-600"}`} 
       />
       {errors.message?.message && <ErrorMessage message={errors.message.message} />}
       {reqError && <ErrorMessage message="Something went wrong. Please, try again" />}

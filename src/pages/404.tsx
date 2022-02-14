@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <p className="text-center"> 
         Redirect to
         <Link href="/">
-          <a className="text-blue-500 mx-2">About Page</a>
+          <a className="text-blue-500 mx-2">Home Page</a>
         </Link>
         in 5 seconds...
       </p>
