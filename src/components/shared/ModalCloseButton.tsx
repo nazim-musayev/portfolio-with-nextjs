@@ -18,7 +18,7 @@ const ModalCloseButton = ({setSelected}: Props) => {
     <>
       <FaRegWindowClose 
        onClick={closeModal}
-       className={`absolute top-4 right-4 sm:top-6 sm:right-6 ${route.includes('projects') && 'top-3 right-3'} text-2xl text-primary cursor-pointer`} 
+       className={`absolute top-4 right-4 sm:top-6 sm:right-6 ${route.includes('projects') && 'xl:top-3 xl:right-3'} text-2xl text-primary cursor-pointer`} 
       /> 
     </>
   )
