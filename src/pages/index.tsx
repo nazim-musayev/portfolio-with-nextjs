@@ -1,4 +1,4 @@
-import type { NextPage, GetStaticProps } from 'next';
+import type { NextPage, GetServerSideProps } from 'next';
 import HomePage from 'components/home';
 import { motion } from 'framer-motion';
 import { transitionProps } from 'variants';
@@ -6,7 +6,7 @@ import { GET_SKILLS } from 'lib';
 import { Skill } from 'interfaces';
 
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const data = await GET_SKILLS();
 
   return {
