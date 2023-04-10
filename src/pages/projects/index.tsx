@@ -1,4 +1,4 @@
-import type { NextPage, GetStaticProps } from 'next';
+import type { NextPage, GetServerSideProps } from 'next';
 import Projects from 'components/projects';
 import { motion } from 'framer-motion';
 import { transitionProps } from 'variants';
@@ -6,7 +6,7 @@ import { GET_PROJECTS } from 'lib';
 import { Project } from 'interfaces';
 
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const projects = await GET_PROJECTS();
 
   return {
