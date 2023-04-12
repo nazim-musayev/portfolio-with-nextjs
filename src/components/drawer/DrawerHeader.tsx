@@ -8,7 +8,7 @@ interface Props {
 export const DrawerHeader = ({toggleDrawer}: Props) => {
  
   return (
-    <div className="flex items-center justify-between px-6">
+    <div className="flex items-center justify-end px-6">
       <MdOutlineClose className="text-primary text-2xl cursor-pointer" onClick={toggleDrawer} />
     </div>
   );
