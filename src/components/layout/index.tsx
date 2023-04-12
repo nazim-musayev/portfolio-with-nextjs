@@ -14,8 +14,8 @@ const Layout = ({children}: {children: React.ReactNode}) => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="Nazim Musayev Frontend Developer portfolio" />
-        <meta name="description" content="Nazim Musayev-Frontend Developer" />
+        <meta name="keywords" content="Nazim Musayev React Developer Portfolio" />
+        <meta name="description" content="Nazim Musayev-React Developer" />
         <meta charSet="utf-8" />
         <title>Nazim Musayev</title>
         <link rel="icon" href="/favicon.ico" />
