@@ -1,5 +1,5 @@
 import { request, gql } from 'graphql-request';
-import { GetSkills, GetProjects } from 'interfaces';
+import { GetSkills, GetProjects, GetResume } from 'interfaces';
 
 
 const graphqlAPI = process.env.GRAPH_CMS as string;
@@ -43,4 +43,20 @@ export const GET_PROJECTS = async () => {
 
   const result = await request<GetProjects>(graphqlAPI, query);
   return result.projects;
+};
+
+export const GET_RESUME = async () => {
+  const query = gql`
+    query MyQuery {
+      resumes {
+        id
+        file {
+          url
+        }
+      }
+    }
+  `;
+
+  const result = await request<GetResume>(graphqlAPI, query);
+  return result.resumes;
 };

@@ -42,3 +42,15 @@ export interface NavItem {
   title: string;
   path: string;
 };
+
+export interface File {
+  url: string;
+};
+
+export interface Resume {
+  file: File;
+};
+
+export interface GetResume {
+  resumes: Resume[];
+};

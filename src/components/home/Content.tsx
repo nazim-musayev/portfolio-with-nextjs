@@ -1,6 +1,10 @@
-import ResumeButton from 'components/shared/ResumeButton';
+import ResumeButton from "components/shared/ResumeButton";
 
-const Content = () => {
+interface IProps {
+  resumeUrl: string;
+};
+
+const Content = ({resumeUrl}: IProps) => {
   return (
     <article>
       <p className="mb-5 text-justify">
@@ -12,7 +16,7 @@ const Content = () => {
         Also I am really enjoying that trying different solutions for the problems which
         I am facing in development process.
       </p>
-      <ResumeButton />
+      <ResumeButton resumeUrl={resumeUrl} />
     </article>
   );
 };

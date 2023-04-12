@@ -10,14 +10,16 @@ import ModalCloseButton from 'components/shared/ModalCloseButton';
 
 interface IProps {
   skills: Skill[];
+  resumeUrl: string;
 };
 
-interface SkillsProps extends IProps {
+interface SkillsProps {
+  skills: Skill[];
   selected: string;
   setSelectedCB: (id: string) => void;
 };
 
-const Home = ({skills}: IProps) => {
+const Home = ({skills, resumeUrl}: IProps) => {
   const [selected, setSelected] = useState<string>('');
   const setSelectedCB = (id: string) => setSelected(id);
   const selectedSkill = skills.find((skill) => skill.id === selected);
@@ -34,7 +36,7 @@ const Home = ({skills}: IProps) => {
         <ProfileImage />
       </div>
       <div className="flex items-center py-20 lg:space-x-20 xl:space-x-20">
-        <Content />
+        <Content resumeUrl={resumeUrl} />
         <div className="hidden lg:block">
           <ProfileImage />
         </div>
