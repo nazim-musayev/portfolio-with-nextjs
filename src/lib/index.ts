@@ -35,7 +35,9 @@ export const GET_PROJECTS = async () => {
         content {
           json
         }
-        demoVideoUrl
+        demoVideoUrl {
+          url
+        }
         repo
       }
     }

@@ -23,7 +23,7 @@ export interface Project {
   content: {
     json: RichTextContent;
   };
-  demoVideoUrl: string;
+  demoVideoUrl: File;
   repo: string;
 };
 

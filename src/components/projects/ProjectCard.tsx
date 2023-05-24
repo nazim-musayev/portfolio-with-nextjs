@@ -17,7 +17,7 @@ const ProjectCard = ({project, selected }: Props) => {
 
   return (
     <div className={`bg-light max-h-[700px] lg:max-h-[600px] p-6 rounded-lg space-y-3
-      ${!isSelected && 'border-b-2 border-red-500 cursor-pointer hover:-translate-y-3 transition duration-700'}
+      ${!isSelected && 'border-b-2 border-red-500 cursor-pointer hover:-translate-y-3 transition duration-700 py-2'}
       ${isSelected && 'px-5 py-14'}`} 
     >
       <Image
@@ -41,8 +41,8 @@ const ProjectCard = ({project, selected }: Props) => {
           <CardButton url={repo} text="repo">
             <FaGithub />
           </CardButton>
-          {(demoVideoUrl) && (
-            <CardButton url={demoVideoUrl} text="video">
+          {(demoVideoUrl?.url) && (
+            <CardButton url={demoVideoUrl.url} text="video">
               <BsCollectionPlay />
             </CardButton>
           )} 

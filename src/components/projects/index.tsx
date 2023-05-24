@@ -12,8 +12,14 @@ const Projects = ({projects}: Props) => {
   const [selected, setSelected] = useState<string>('');
   const selectedProject = projects.find(project => project.id === selected);
 
+  const handleOutsideClick = () => {
+    if (selected) {
+      setSelected('');
+    };
+  };
+
   return (
-    <>
+    <div onClick={handleOutsideClick}>
       <p className="px-5 pb-10 text-red-500 text-justify">
         * The last 3 projects from above are not responsive for mobile devices.
       </p>
@@ -34,7 +40,7 @@ const Projects = ({projects}: Props) => {
           </div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };
   
